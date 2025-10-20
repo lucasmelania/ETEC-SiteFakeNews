@@ -129,10 +129,13 @@ nav a.accent-link {
   nav ul {
     width: 100%;
     flex-direction: column;
+    padding-left: 0em;
   }
   nav a {
     width: 100%;
     padding-left: 2.5em;
+
+    text-align: left;
   }
   nav a.active-link {
     border-bottom: none;

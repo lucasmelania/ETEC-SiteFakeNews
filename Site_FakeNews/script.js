@@ -37,3 +37,21 @@ function closeSidebar() {
 // })
 
 updateNavbar(media);
+
+document.getElementById("btn-topico1").addEventListener("click", () => {
+  const destino = document.getElementById("topico1");
+
+  // Adiciona classe de animação
+  destino.classList.add("fade-in-section");
+
+  // Rola suavemente até o destino
+  destino.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+
+  // Remove a animação depois de um tempo
+  setTimeout(() => {
+    destino.classList.remove("fade-in-section");
+  }, 1500);
+});

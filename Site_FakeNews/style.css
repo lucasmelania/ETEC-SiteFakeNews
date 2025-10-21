@@ -5,6 +5,20 @@
   --accent-color: #0071ff;
   --text-color: #c9c9c9;
 }
+.fade-in-section {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 #sec-verificacao .list-group-item {
   background-color: #1e293b;
@@ -21,18 +35,31 @@
   animation: fadeInUp 1s ease-out;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInLeft 1s ease-out forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInRight 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInLeft {
+  to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
-html {
-  scroll-behavior: smooth;
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 #pesquisa {
@@ -132,7 +159,7 @@ body {
     #0f172a;
 }
 main {
-  padding: min(5em, 7%);
+  padding: min(5em, 15%);
   background-color: var(--primary-color);
 }
 main h1:first-child {
@@ -145,8 +172,6 @@ main p {
 
 nav {
   background-color: var(--primary-color);
-  border-bottom: 1px solid var(--hover-color);
-  height: 3.6em;
 }
 nav ul {
   list-style: none;
@@ -159,6 +184,7 @@ nav li {
   display: flex;
 }
 nav a {
+  font-size: 1.5em;
   display: flex;
   text-decoration: none;
   color: var(--text-color);
